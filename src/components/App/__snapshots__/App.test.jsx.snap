@@ -1,16 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders App 1`] = `
-<ArtistList
-  artists={
-    Array [
-      Object {
-        "id": "stjkstkjlljst",
-        "name": "Jackson Michael",
-        "score": 87,
-        "type": "Group",
-      },
-    ]
-  }
-/>
-`;
+exports[`App component renders App 1`] = `<MainContainer />`;
