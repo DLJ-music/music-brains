@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 const Artist = ({ name, id, type, score }) => {
   return (
-    <li key={id}>
-      <h1>{name}</h1>
+    <>
+      <h1 id={id}>{name}</h1>
       {type && <h2>{type}</h2>}
       {score && <h2>{score}</h2>}
-    </li>
+    </>
   )
 }
 
