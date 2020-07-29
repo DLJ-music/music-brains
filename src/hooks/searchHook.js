@@ -14,7 +14,8 @@ export const useSearch = () => {
   return {
     searchQuery,
     handleChange,
-    handleSearch
+    handleSearch, 
+    searchInput
   };
 };
 

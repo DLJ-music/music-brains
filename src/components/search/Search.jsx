@@ -1,19 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Search = ({ handleChange, handleSearch }) => {
+const Search = ({ searchInput, handleChange, handleSearch }) => {
   return (
     <>
-      <input onChange={handleChange}></input>
+      <input type='text' value={searchInput} onChange={handleChange}></input>
       <button onClick={handleSearch}>Search</button>
     </>
-  )
-}
+  );
+};
 
 Search.propTypes = {
   handleChange: PropTypes.func,
-  handleSearch: PropTypes.func
-}
+  handleSearch: PropTypes.func,
+  searchInput: PropTypes.string
+};
 
-export default Search
+export default Search;
 
