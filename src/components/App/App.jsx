@@ -1,6 +1,8 @@
 import React from 'react';
+import ArtistList from '../artists/ArtistList'
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  const artists = [{ id: 'stjkstkjlljst', name: 'Jackson Michael', type: 'Group', score: 87}]
+  return <ArtistList artists={artists}/>;
 }
   

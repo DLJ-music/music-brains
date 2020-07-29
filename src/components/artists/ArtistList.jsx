@@ -1,5 +1,5 @@
 import React from 'react'
-import Artist from './Artist.js'
+import Artist from './Artist.jsx'
 import PropTypes from 'prop-types'
 
 const ArtistList = ({ artists }) => {
