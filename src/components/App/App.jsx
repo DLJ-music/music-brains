@@ -6,6 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 import ArtistReleaseContainer from '../../containers/ArtistReleaseContainer';
+import RecordingsContainer from '../../containers/RecordingsContainer';
 
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
         <Route exact path='/' component={MainContainer}/>
         {/* <Route path='/:name' component={MainContainer} /> */}
         <Route path='/artist/:id' component={ArtistReleaseContainer} />
-        {/* <Route path='/release/:id' component= {something} /> */}
+        <Route path='/release/:id' component= {RecordingsContainer} />
       </Switch>
     </Router>
   );

@@ -9,7 +9,7 @@ export const useArtist = id => {
   useEffect(() => {
     getArtistByID(id)
       .then(({ releases }) => {
-        console.log(releases);
+        // console.log(releases);
         setArtistReleases(releases);
       });
   }, [id]);
