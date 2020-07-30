@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useSearch = () => {
+export const useSearch = (setOffset) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchInput, setSearchInput] = useState('');
  
@@ -10,6 +10,7 @@ export const useSearch = () => {
   };
   const handleSearch = () => {
     setSearchQuery(searchInput);
+    setOffset(0);
   };
   return {
     searchQuery,
