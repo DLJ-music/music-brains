@@ -2,11 +2,11 @@ import React from 'react';
 import Search from '../components/search/Search';
 import Pagination from '../components/pagination/Pagination';
 import ArtistList from '../components/artists/ArtistList';
-import { useArtists } from '../hooks/ArtistsHooks';
+import { useArtists } from '../hooks/artistsHooks';
 import { useSearch } from '../hooks/searchHook';
 import { usePagination } from '../hooks/paginationHook';
 // import { useLocation } from 'react-router-dom';
-import { SearchProvider } from '../contexts/SearchContext.js';
+
 
 
 const MainContainer = () => {
