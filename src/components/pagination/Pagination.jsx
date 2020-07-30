@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Pagination = ({ previousPage, nextPage, page }) => {
+const Pagination = ({ loading, previousPage, nextPage, page }) => {
   return (
     <section>
-      <button onClick={previousPage}>Previous</button>
+      <button disabled={loading} onClick={previousPage}>Previous</button>
       <span style={{ margin: '0 10px' }}>{page}</span>
-      <button onClick={nextPage}>Next</button>
+      <button disabled={loading} onClick={nextPage}>Next</button>
     </section>
   );
 };
@@ -14,7 +14,8 @@ const Pagination = ({ previousPage, nextPage, page }) => {
 Pagination.propTypes = {
   page: PropTypes.number,
   previousPage: PropTypes.func,
-  nextPage: PropTypes.func
+  nextPage: PropTypes.func,
+  loading: PropTypes.bool
 };
 
 export default Pagination;
