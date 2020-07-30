@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistList component renders ArtistList 1`] = `
+<ul>
+  <Link
+    key="stjkstkjlljst"
+    to="/artist/stjkstkjlljst/Jackson Michael"
+  >
+    <li
+      key="stjkstkjlljst"
+    >
+      <Artist
+        id="stjkstkjlljst"
+        name="Jackson Michael"
+        score={87}
+        type="Group"
+      />
+    </li>
+  </Link>
+</ul>
+`;
