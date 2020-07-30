@@ -8,21 +8,20 @@ import { usePagination } from '../hooks/paginationHook';
 
 
 const MainContainer = () => {
-  
-  // usePagination
-  const { previousPage, nextPage, offset, setOffset, setCount, currentPage } = usePagination();
- 
-  // useSearchHook
-  const { searchQuery, searchInput, handleChange, handleSearch } = useSearch(setOffset);
 
   // useArtistList
-  const { artists } = useArtists(searchQuery, offset, setOffset, setCount);
+  const { artists, limit, count, offset, setOffset, currentPage, loading, setSearchQuery } = useArtists();
 
+  // useSearchHook
+  const { searchInput, handleChange, handleSearch } = useSearch(setSearchQuery, setOffset);
+
+  // usePagination
+  const { previousPage, nextPage } = usePagination(offset, limit, count, setOffset);
 
   return (
     <div>
-      <Search searchInput={searchInput} handleChange={handleChange} handleSearch={handleSearch} />
-      <Pagination previousPage={previousPage} nextPage={nextPage} page={currentPage} />
+      <Search loading={loading} searchInput={searchInput} handleChange={handleChange} handleSearch={handleSearch} />
+      <Pagination loading={loading} previousPage={previousPage} nextPage={nextPage} page={currentPage} />
       <ArtistList artists={artists}/>
     </div>
   );
