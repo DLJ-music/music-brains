@@ -1,23 +1,26 @@
-import React from 'react'
-import Artist from './Artist.jsx'
-import PropTypes from 'prop-types'
+import React from 'react';
+import Artist from './Artist.jsx';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const ArtistList = ({ artists }) => {
   const artistElements = artists.map(artist => (
-    <li key={artist.id}>
-      <Artist {...artist}/>
-    </li>
-  ))
+    <Link key={artist.id} to={`/${artist.id}`} >
+      <li key={artist.id}>
+        <Artist {...artist}/>
+      </li>
+    </Link>
+  ));
   return (
     <ul>
       {artistElements}
     </ul>
-  )
-}
+  );
+};
 
 ArtistList.propTypes = {
   artists: PropTypes.array.isRequired
-}
+};
 
-export default ArtistList
+export default ArtistList;
 
