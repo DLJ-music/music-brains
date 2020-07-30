@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const ReleaseDetail = ({ recordings }) => {
+const ReleaseDetail = ({ recordings, name }) => {
 
   const songElement = recordings.map(song => (
-    <li key={song.id} >
-      {song.title}
-    </li>
+    <Link key={song.id} to={`/lyrics/${name}/${song.title}`} >
+
+      <li key={song.id} >
+        {song.title}
+      </li>
+    </Link>
   ));
 
   return (
@@ -17,7 +21,8 @@ const ReleaseDetail = ({ recordings }) => {
 
 };
 ReleaseDetail.propTypes = {
-  recordings: PropTypes.array.isRequired
+  recordings: PropTypes.array.isRequired,
+  name: PropTypes.string
 };
 
 export default ReleaseDetail;

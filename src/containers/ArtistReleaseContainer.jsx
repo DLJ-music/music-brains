@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 
 const ArtistReleaseContainer = () => {
-  const { id } = useParams();
+  const { id, name } = useParams();
 
   
 
@@ -13,7 +13,7 @@ const ArtistReleaseContainer = () => {
   return (
     <>
 
-      <ArtistIDDetail releases={artistReleases} />
+      <ArtistIDDetail releases={artistReleases} name={name} />
     </>
   );
 };

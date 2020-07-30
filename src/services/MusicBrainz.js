@@ -24,3 +24,13 @@ export const getReleaseByID = id => {
   })
     .then(res => res.json());
 };
+
+export const getLyrics = (artist, song) => {
+  return fetch(`https://api.lyrics.ovh/v1/${artist}/${song}`, {
+    headers: {
+      Origin: null
+    }
+  })
+    .then(res => res.json())
+    .then(res => res.lyrics);
+};

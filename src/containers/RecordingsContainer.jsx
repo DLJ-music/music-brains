@@ -5,13 +5,13 @@ import { useRelease } from '../hooks/releaseHooks.js';
 
 
 const RecordingsContainer = () => {
-  const { id } = useParams();
+  const { id, name } = useParams();
 
   const { recordings } = useRelease(id);
     
   return (
     <>
-      <ReleaseDetail recordings={recordings} /> 
+      <ReleaseDetail recordings={recordings} name={name} /> 
     </>
   );
 };

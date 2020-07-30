@@ -5,8 +5,8 @@ import ArtistList from '../components/artists/ArtistList';
 import { useArtists } from '../hooks/ArtistsHooks';
 import { useSearch } from '../hooks/searchHook';
 import { usePagination } from '../hooks/paginationHook';
-import { useLocation } from 'react-router-dom';
-
+// import { useLocation } from 'react-router-dom';
+import { SearchProvider } from '../contexts/SearchContext.js';
 
 
 const MainContainer = () => {
@@ -25,9 +25,11 @@ const MainContainer = () => {
 
   return (
     <div>
+      {/* <SearchProvider value={}> */}
       <Search searchInput={searchInput} handleChange={handleChange} handleSearch={handleSearch} />
       <Pagination previousPage={previousPage} nextPage={nextPage} page={currentPage} />
       <ArtistList artists={artists}/>
+      {/* </SearchProvider> */}
     </div>
   );
 };

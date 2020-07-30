@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import ArtistReleaseContainer from '../../containers/ArtistReleaseContainer';
 import RecordingsContainer from '../../containers/RecordingsContainer';
+import LyricsContainer from '../../containers/LyricsContainer';
 
 
 export default function App() {
@@ -15,9 +16,9 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={MainContainer}/>
-        {/* <Route path='/:name' component={MainContainer} /> */}
-        <Route path='/artist/:id' component={ArtistReleaseContainer} />
-        <Route path='/release/:id' component= {RecordingsContainer} />
+        <Route path='/lyrics/:name/:title' component={LyricsContainer} />
+        <Route path='/artist/:id/:name' component={ArtistReleaseContainer} />
+        <Route path='/release/:id/:name' component= {RecordingsContainer} />
       </Switch>
     </Router>
   );

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const ArtistIDDetail = ({ releases }) => {
+const ArtistIDDetail = ({ releases, name }) => {
   const releaseElement = releases.map(release => (
-    <Link key={release.id} to={`/release/${release.id}`} >
+    <Link key={release.id} to={`/release/${release.id}/${name}`} >
 
       <li key={release.id}>
         <figure >
@@ -28,7 +28,8 @@ const ArtistIDDetail = ({ releases }) => {
 };
 
 ArtistIDDetail.propTypes = {
-  releases: PropTypes.array.isRequired
+  releases: PropTypes.array.isRequired,
+  name: PropTypes.string
 };
 
 export default ArtistIDDetail;

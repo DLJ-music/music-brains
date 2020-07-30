@@ -2,15 +2,20 @@
 
 exports[`ArtistList component renders ArtistList 1`] = `
 <ul>
-  <li
+  <Link
     key="stjkstkjlljst"
+    to="/artist/stjkstkjlljst/Jackson Michael"
   >
-    <Artist
-      id="stjkstkjlljst"
-      name="Jackson Michael"
-      score={87}
-      type="Group"
-    />
-  </li>
+    <li
+      key="stjkstkjlljst"
+    >
+      <Artist
+        id="stjkstkjlljst"
+        name="Jackson Michael"
+        score={87}
+        type="Group"
+      />
+    </li>
+  </Link>
 </ul>
 `;
