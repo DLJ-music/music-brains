@@ -14,7 +14,10 @@ export const useArtists = () => {
   const [searchQuery, setSearchQuery] = useState(null);
 
   useEffect(() => {
+    
+    // const location = useHistory();
     // fetch initial data, no search params
+    // const searchQuery = new URLSearchParams((location.search).get(searchQuery) || searchQuery);
     // setArtists to the received data
     const params = new URLSearchParams(location.search);
 
