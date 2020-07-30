@@ -15,7 +15,8 @@ export default function App() {
       <Switch>
         <Route exact path='/' component={MainContainer}/>
         {/* <Route path='/:name' component={MainContainer} /> */}
-        <Route path='/:id' component={ArtistReleaseContainer} />
+        <Route path='/artist/:id' component={ArtistReleaseContainer} />
+        {/* <Route path='/release/:id' component= {something} /> */}
       </Switch>
     </Router>
   );
