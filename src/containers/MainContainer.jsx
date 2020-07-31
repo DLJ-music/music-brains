@@ -19,6 +19,11 @@ const MainContainer = () => {
 
   // usePagination
   const { previousPage, nextPage } = usePagination(offset, limit, count, setOffset);
+  
+  //loading animation 
+  if(loading) return <div style={{ display: 'flex', WebkitJustifyContent: 'center' }}>
+    <img src='/loading.gif' alt="loading"/>;
+  </div>;
 
   return (
     <div>
