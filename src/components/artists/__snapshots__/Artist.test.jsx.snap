@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artist component renders Artist 1`] = `
+<Fragment>
+  <h1
+    id="stjkstkjlljst"
+  >
+    Jackson Michael
+  </h1>
+  <h2>
+    Group
+  </h2>
+  <h2>
+    87
+  </h2>
+</Fragment>
+`;
